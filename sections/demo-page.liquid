@@ -24,6 +24,17 @@
   <div class="rte">
     {{ page.content }}
   </div>
+
+  {% assign num1 = 10 %}
+  {% assign num2 = 30 %}
+
+  Addition = {{ num1 | plus: num2 }}
+  <br>
+  Subtraction =  {{ num1 | minus: num2 }}
+  <br>
+  Multiplication = {{ num1 | times: num2 }}
+  <br>
+  Division = {{ num1 | divided_by: num2 }}
 </div>
 
 {% comment %}
