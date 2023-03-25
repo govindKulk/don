@@ -10,6 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {{ product.handle | downcase | replace: " ", "-" }}
@@ -70,6 +71,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+        {% unless  {{ product.handle | downcase | replace: " ", "-" }} == "cat-high-foot-ceramics-bowls-small-medium-dog-food-water-feeder-pet-drinking-eating-dishes-cats-puppy-elevated-feeding-bowl" %}
           <button
             id = "ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -98,6 +100,7 @@
               </svg>
             </div>
           </button>
+        {% endunless %}
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
