@@ -1,4 +1,4 @@
-<h3 style="text-align: center;" >{{ section.settings.text }}</h3>
+<h3 style="text-align: center; color:{{ section.settings.color }}" >{{ section.settings.text }}</h3>
 <div class="social-media-icons" style="display:flex;gap:24px; border-radius:50%; justify-content: center;">
   <a href="{{ section.settings.instagram_link }}"><i class="fab fa-3x fa-instagram"></i></a>
   <a href="{{ section.settings.facebook_link }}"><i class="fab fa-3x fa-facebook"></i></a>
@@ -10,6 +10,22 @@
   {
     "name": "Social media links",
   "settings": [
+    {
+      "type": "select",
+      "id": "section_color",
+      "options":[
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "label": "Section Head Color"
+    }
+    ,
     {
       "type": "text",
       "id": "text",
