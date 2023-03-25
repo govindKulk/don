@@ -11,9 +11,7 @@
             "text": "Welcome to our store",
             "text_alignment": "center",
             "color_scheme": "background-1",
-            "link": "",
-            "padding_top": 4,
-            "padding_bottom": 28
+            "link": ""
           }
         }
       },
