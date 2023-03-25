@@ -13,7 +13,7 @@
 
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
-    {{ product.handle | downcase | replace: " ", "-" }}
+{% comment %}     {{ product.handle | downcase | replace: " ", "-" }} {% endcomment %}
     {%- liquid
       assign gift_card_recipient_feature_active = false
       if block.settings.show_gift_card_recipient and product.gift_card?
