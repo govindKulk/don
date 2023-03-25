@@ -1,7 +1,39 @@
+<div class="social-media-icons">
+  <a href="{{ section.settings.instagram_link }}"><i class="fab fa-instagram"></i></a>
+  <a href="{{ section.settings.facebook_link }}"><i class="fab fa-facebook"></i></a>
+  <a href="{{ section.settings.etsy_link }}"><i class="fab fa-etsy"></i></a>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Social media links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "instagram_link",
+      "label": "Instagram Link"
+      
+    },
+    {
+      "type": "text",
+      "id": "facebook_link",
+      "label": "Facebook Link"
+      
+    },
+    {
+      "type": "text",
+      "id": "etsy_link",
+      "label": "Etsy Link"
+      
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social media links",
+      "category": "Social"
+    }
+  ]
   }
 {% endschema %}
 
