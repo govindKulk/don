@@ -214,9 +214,21 @@
     "49572cac-008e-4723-8b9b-1251375bbbe1": {
       "type": "social-media",
       "settings": {
+        "color": "black",
+        "text": "Section Head",
         "instagram_link": "https:\/\/instagram.com",
         "facebook_link": "https:\/\/facebook.com",
         "etsy_link": "https:\/\/etsy.com"
+      }
+    },
+    "e9239299-9fd9-467f-be72-de28a1a271fa": {
+      "type": "position-text",
+      "custom_css": [
+        ".positioned-text:hover{transition: all 3s ease; font-size: 2rem; font-weight: bold; color: red;}"
+      ],
+      "settings": {
+        "text": "This is the customizable text.",
+        "position": "center"
       }
     }
   },
@@ -227,6 +239,7 @@
     "collage",
     "video",
     "multicolumn",
-    "49572cac-008e-4723-8b9b-1251375bbbe1"
+    "49572cac-008e-4723-8b9b-1251375bbbe1",
+    "e9239299-9fd9-467f-be72-de28a1a271fa"
   ]
 }
