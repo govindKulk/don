@@ -1,7 +1,39 @@
+<div>
+  {{ section.settings.text }}
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Position Text",
+    
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Enter Your Text Here",
+        "default": "Section Text"
+      },
+      {
+        "type": "select",
+        "id": "position",
+        "label": "Position Your Text",
+        "options": [
+          {
+            "label": "left",
+            "value": "left"
+          },
+          {
+            "label": "center",
+            "value": "center"
+          },
+          {
+            "label": "right",
+            "value": "right"
+          }
+          ],
+        "default": "left"
+      }
+    ]
   }
 {% endschema %}
 
