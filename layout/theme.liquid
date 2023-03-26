@@ -7,7 +7,7 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="stylesheet" href={{ "theme.css.liquid" | asset_url }} /> 
+    <link rel="stylesheet" href={{ "theme.css.liquid" | asset_url }} > 
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -241,6 +241,8 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
+
+    <link rel="stylesheet" href={{ "theme.css.liquid" | asset_url }} > 
   </head>
 
   <body class="gradient">
