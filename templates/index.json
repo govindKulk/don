@@ -232,7 +232,7 @@
         "etsy_link": "https:\/\/etsy.com",
         "icons-size": 3,
         "icons-color": "#1b7d99",
-        "background": "radial-gradient(rgba(255, 255, 255, 1), rgba(51, 79, 180, 1) 28%, rgba(255, 255, 255, 1) 66.187%, rgba(0, 0, 0, 1) 83%)"
+        "background": "linear-gradient(41deg, rgba(255, 255, 255, 1), rgba(51, 79, 180, 1) 28%, rgba(57, 64, 180, 1) 56%, rgba(255, 255, 255, 1) 66.187%, rgba(255, 5, 5, 1) 87%)"
       }
     },
     "e9239299-9fd9-467f-be72-de28a1a271fa": {
