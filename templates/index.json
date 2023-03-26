@@ -231,7 +231,8 @@
         "facebook_link": "https:\/\/facebook.com",
         "etsy_link": "https:\/\/etsy.com",
         "icons-size": 3,
-        "icons-color": "#1b7d99"
+        "icons-color": "#1b7d99",
+        "background": "radial-gradient(rgba(255, 255, 255, 1), rgba(51, 79, 180, 1) 28%, rgba(255, 255, 255, 1) 66.187%, rgba(0, 0, 0, 1) 83%)"
       }
     },
     "e9239299-9fd9-467f-be72-de28a1a271fa": {
