@@ -253,6 +253,11 @@
 
     {% sections 'header-group' %}
 
+  {% if settings.custom-text-box %}
+    <h1>{{ settings.custom-text-box }}</h1>
+
+  {% endif %}
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
