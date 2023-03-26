@@ -1,111 +1,126 @@
-<h3 style="text-align: center; color:{{ section.settings.color }}; font-weight: bold" >{{ section.settings.text }}</h3>
-<div class="social-media-icons" style="display:flex;gap:24px; border-radius:50%; justify-content: center; 
-  {% if section.settings.icons-color %}
-   color: {{section.settings.icons-color  }};
-    {% endif %}">
-  <a style= "color: inherit" href="{{ section.settings.instagram_link }}"><i class="fab fa-{{ section.settings.icons-size }}x fa-instagram"></i></a>
-  <a style= "color: inherit" href="{{ section.settings.facebook_link }}"><i class="fab fa-{{ section.settings.icons-size }}x fa-facebook"></i></a>
-  <a style= "color: inherit" href="{{ section.settings.etsy_link }}"><i class="fab fa-{{ section.settings.icons-size }}x fa-etsy"></i></a>
-
-
+<h3 style="text-align: center; color:{{ section.settings.color }}; font-weight: bold">{{ section.settings.text }}</h3>
+<div
+  class="social-media-icons"
+  style="
+    display:flex;gap:24px; border-radius:50%; justify-content: center;
+    {% if section.settings.icons-color %}
+     color: {{section.settings.icons-color  }};
+      {% endif %}
+  "
+>
+  <a style="color: inherit" href="{{ section.settings.instagram_link }}"
+    ><i class="fab fa-{{ section.settings.icons-size }}x fa-instagram"></i
+  ></a>
+  <a style="color: inherit" href="{{ section.settings.facebook_link }}"
+    ><i class="fab fa-{{ section.settings.icons-size }}x fa-facebook"></i
+  ></a>
+  <a style="color: inherit" href="{{ section.settings.etsy_link }}"
+    ><i class="fab fa-{{ section.settings.icons-size }}x fa-etsy"></i
+  ></a>
 </div>
-  {% for block in section.blocks %}
-    <h1 style="text-align:center;">{{ block.settings.social-text }}</h1>
-  {% endfor %}
-
+{% for block in section.blocks %}
+  <h1 style="text-align:center;">{{ block.settings['social-text'] }}</h1>
+{% endfor %}
 
 {% schema %}
+{
+  "name": "Social media links",
+
+"settings": [
   {
-    "name": "Social media links",
-  "settings": [
-    {
-      "type": "select",
-      "id": "color",
-      "options":[
-        {
-          "value": "black",
-          "label": "Black"
-        },
-        {
-          "value": "red",
-          "label": "Red"
-        },
-        {
-          "value": "yellow",
-          "label": "Yellow"
-        }
-      ],
-      "default": "black",
-      "label": "Section Head Color"
-    }
-    ,
-    {
-      "type": "text",
-      "id": "text",
-      "label": "Section Head",
-      "default": "Section Head"
-    }
-    ,{
-      
-      "type": "text",
-      "id": "instagram_link",
-      "label": "Instagram Link"
-      
-    },
-    {
-      "type": "text",
-      "id": "facebook_link",
-      "label": "Facebook Link"
-      
-    },
-    {
-      "type": "text",
-      "id": "etsy_link",
-      "label": "Etsy Link"
-      
-    },
-    {
-      "type": "range",
-      "id": "icons-size",
-      "label": "Icons Size",
-      "min": 1,
-      "max": 3,
-      "step": 1,
-      "default": 2
- 
-      
-    },
-        {
-          "type": "color",
-          "id": "icons-color",
-          "label": "Icons Color",
-          "default": "#000000"
-        }
-  ],
-    "blocks": [
-      
+    "type": "select",
+    "id": "color",
+    "options":[
       {
-      
-        "name": "social-text",
-        "type": "text",
-          "settings": [
-            {
-              "type": "text",
-              "id": "social-text",
-              "label": "Social Media Text",
-              "default": "Enter YOur Text Here"
-            }
-          ]
-       
+        "value": "black",
+        "label": "Black"
+      },
+      {
+        "value": "red",
+        "label": "Red"
+      },
+      {
+        "value": "yellow",
+        "label": "Yellow"
       }
     ],
-  "presets": [
-    {
-      "name": "Social media links",
-      "category": "Social"
-    }
-  ]
+    "default": "black",
+    "label": "Section Head Color"
   }
+  ,
+  {
+    "type": "text",
+    "id": "text",
+    "label": "Section Head",
+    "default": "Section Head"
+  }
+  ,{
+
+    "type": "text",
+    "id": "instagram_link",
+    "label": "Instagram Link"
+
+  },
+  {
+    "type": "text",
+    "id": "facebook_link",
+    "label": "Facebook Link"
+
+  },
+  {
+    "type": "text",
+    "id": "etsy_link",
+    "label": "Etsy Link"
+
+  },
+  {
+    "type": "range",
+    "id": "icons-size",
+    "label": "Icons Size",
+    "min": 1,
+    "max": 3,
+    "step": 1,
+    "default": 2
+
+
+  },
+  {
+    "type": "color",
+    "id": "icons-color",
+    "label": "Icons Color",
+    "default": "#000000"
+  },
+  {
+    "type": "color_background",
+    "id": "background",
+    "label": "Section Background Color",
+    "default": "#FFFFFF"
+  }
+],
+  "blocks": [
+
+    {
+
+      "name": "social-text",
+      "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "social-text",
+            "label": "Social Media Text",
+            "default": "Enter YOur Text Here"
+          }
+        ]
+
+    }
+  ],
+"presets": [
+  {
+    "name": "Social media links",
+    "category": "Social"
+  }
+]
+}
 {% endschema %}
 
 {% stylesheet %}
