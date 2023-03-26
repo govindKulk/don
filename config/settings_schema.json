@@ -1583,5 +1583,33 @@
         "placeholder": "Enter Your Text Here"
       }
     ]
+  },
+  {
+    "name": "Theme Text Alignment",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Choose the alignment for entire theme"
+      },
+      {
+        "type": "select",
+        "id": "theme-alignment",
+        "label": "Theme Alignment Options",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "center",
+            "value": "center"
+          },
+          {
+            "label": "right",
+            "value": "right"
+          }
+        ]
+      }
+    ]
   }
 ]
