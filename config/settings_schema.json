@@ -1575,6 +1575,12 @@
       {
         "type": "paragraph",
         "content": "Your Custom Text"
+      },
+      {
+        "type": "text",
+        "id": "custom-text-box",
+        "label": "Text Field",
+        "default": "Enter Your Text Here"
       }
     ]
   }
