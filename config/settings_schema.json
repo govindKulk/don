@@ -1608,7 +1608,8 @@
             "label": "right",
             "value": "right"
           }
-        ]
+        ],
+        "default": "left"
       }
     ]
   }
