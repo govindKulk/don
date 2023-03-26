@@ -7,7 +7,8 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    {{ "theme.css.liquid" | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href={{ "theme.css.liquid" | asset_url }} /> 
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
