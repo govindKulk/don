@@ -7,10 +7,11 @@
   <a style= "color: inherit" href="{{ section.settings.facebook_link }}"><i class="fab fa-{{ section.settings.icons-size }}x fa-facebook"></i></a>
   <a style= "color: inherit" href="{{ section.settings.etsy_link }}"><i class="fab fa-{{ section.settings.icons-size }}x fa-etsy"></i></a>
 
-  {% for block in section.blocks %}
-    <h1>{{ block.settings.social-text }}</h1>
-  {% endfor %}
+
 </div>
+  {% for block in section.blocks %}
+    <h1 style="text-align:center;">{{ block.settings.social-text }}</h1>
+  {% endfor %}
 
 
 {% schema %}
