@@ -35,7 +35,7 @@ This has to be commented
 {% endcomment %}
 
 {% assign article = section.settings.article %}
-<h1>{{ new-article.content }}</h1>
+<h1>{{ article.content }}</h1>
 
 {%  for article in section.settings.blog.articles %}
   {{ article.content }}
