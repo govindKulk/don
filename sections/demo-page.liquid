@@ -37,6 +37,10 @@ This has to be commented
 {% assign article = section.settings.article %}
 <h1>{{ new-article.content }}</h1>
 
+{%  for article in section.settings.blog.articles %}
+  {{ article.title }}
+  {% endfor %}
+
 {% schema %}
 {
   "name": "t:sections.demo-page.name",
