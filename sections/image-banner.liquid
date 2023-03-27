@@ -1,5 +1,27 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+
+
+{% style %}
+  
+  {% comment %}
+  Styles for alligning text box on the image banner
+  {% endcomment %}
+  @media and screen(min-width: 750px){
+       .banner--desktop-transparent .banner__box {
+	background: transparent;
+	--color-foreground: 255, 255, 255;
+	--color-button: 255, 255, 255;
+	--color-button-text: 0, 0, 0;
+	max-width: 89rem;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: {{section.settings.text-box-align}};
+  }
+  }
+ 
+{% endstyle %}
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -108,7 +130,9 @@
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient ">
+      
+      
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -362,26 +386,26 @@
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
     },
-  {
-    "type": "select",
-    "id": "text-box-align",
-    "label": "Align Text Box Content",
-    "options": [
-      {
-        "label": "Left",
-        "value": "left"
-      },
-      {
-        "label": "Center",
-        "value": "center"
-      },
-      {
-        "label": "Right",
-        "value": "right"
-      }
-    ],
-    "default": "center"
-  }
+    {
+      "type": "select",
+      "id": "text-box-align",
+      "label": "Align Text Box Content",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ],
+      "default": "center"
+    }
   ],
   "blocks": [
     {
