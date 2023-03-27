@@ -1,7 +1,7 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 
-{{ section.settings.banner-btn-size }}
+
 
 
 {% style %}
@@ -22,7 +22,7 @@
 }
 
   .banner__buttons .button {
-	width: {{section.settings.banner-btn-size}}px;
+	width: {{block.settings.banner-btn-size}}px;
 }
  
 {% endstyle %}
