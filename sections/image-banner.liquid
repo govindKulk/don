@@ -5,7 +5,7 @@
 
 
 {% style %}
-  
+ 
   {% comment %}
   Styles for alligning text box on the image banner
   {% endcomment %}
@@ -21,8 +21,12 @@
     
 }
 
+
+   {% for block in section.blocks %}
+    {%  assign button_size = block.settings.banner-btn-size %}
+    {%  endfor %}
   .banner__buttons .button {
-	width: {{block.settings.banner-btn-size}}px;
+	width: {{button_size}}px;
 }
  
 {% endstyle %}
