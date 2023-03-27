@@ -36,11 +36,12 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-brown-and-black-dog.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "middle-left",
+        "image_height": "small",
+        "desktop_content_position": "middle-right",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "right",
         "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
