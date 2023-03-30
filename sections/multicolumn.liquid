@@ -68,13 +68,19 @@
           >
           {% style %}
             .multicolumn-card{
-              display: flex;
-              flex-direction: row-reverse;
+             align-items: center;
+              justify-content: center;
 
-              .multicolumn-card__image-wrapper{
+              
+            }
+
+            .multicolumn-card__image-wrapper{
                 min-width: 40%;
               }
-            }
+              .multicolumn-card__image-wrapper img{
+                width: 100%;
+              }
+            
             {% endstyle %}
             <div class="multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
