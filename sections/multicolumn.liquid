@@ -96,7 +96,8 @@
               background-color: (( block.settings.block-bg)) !important;
             }
             
-            {% endstyle %}
+            {% endstyle %}.
+          {{ block.settings.block-bg }}
            
             <div class="multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
